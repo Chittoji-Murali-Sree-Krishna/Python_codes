@@ -1,2 +1,2 @@
-# Python_codes
-these are some basic python codes
+# calculator.py
+i tried to use almost all the basics in a single file
