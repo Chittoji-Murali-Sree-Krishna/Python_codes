@@ -3,7 +3,7 @@ import tkinter as tk
 
 
 root = tk.Tk()
-root.geometry("340x400")
+root.geometry("600x600")
 root.title("Calculator Gui")
 
 val = ""
