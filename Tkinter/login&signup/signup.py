@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 import sqlite3
 from tkinter import messagebox
+from PIL import ImageTk, Image
 
 root = tk.Tk()
 root.title('signup database')
@@ -96,6 +97,7 @@ email = Entry(root, bg='grey', fg='black', width=30)
 password = Entry(root, bg='grey', fg='black', width=30)
 password2 = Entry(root, bg='grey', fg='black', width=30)
 mobile = Entry(root, bg='grey', fg='black', width=30)
+my_img = ImageTk.PhotoImage(Image.open("/home/wargun/Pictures/mylogo.png"))
 submit = Button(root, text='submit', bg='dodger blue',
                 font=('bold'), command=filled)
 
@@ -117,7 +119,9 @@ password_l = Label(text="Enter Your Password: ", bg='black',
                    fg='white', font=('Monospace', 14, 'bold'), height=2)
 password2_l = Label(text="Retype Password Again: ", bg='black',
                     fg='white', font=('Monospace', 14, 'bold'), height=2)
-
+my_label = Label(image=my_img, bg='black')
+my_label2 = Label(root, text='signup form', bg='black',
+                  fg='white', font=('monospace', 30, 'bold'))
 
 # for the place of the entries
 f_name.grid(row=1, column=1)
@@ -135,5 +139,6 @@ phone_l.grid(row=4, column=0)
 password_l.grid(row=5, column=0)
 password2_l.grid(row=6, column=0)
 submit.grid(row=7, column=1)
-
+my_label.grid(row=0, column=0)
+my_label2.grid(row=0, column=1)
 root.mainloop()
