@@ -13,3 +13,5 @@ this will take all the given inputs and save it to the database and when we want
 it's a normal number guessing game which is will generate random number if we guess correct you win ,until then u can retry
 # contactbook.py
 this will take the contacts and store it in a database and when we want it will save it back into a txt file
+# email_slicer.py
+this will take your email and slice it giving you a username and domain
