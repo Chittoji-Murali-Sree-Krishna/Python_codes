@@ -15,3 +15,5 @@ it's a normal number guessing game which is will generate random number if we gu
 this will take the contacts and store it in a database and when we want it will save it back into a txt file
 # email_slicer.py
 this will take your email and slice it giving you a username and domain
+# fibonacci_sequence.py
+this will print fibonacci number of that particualr number 
