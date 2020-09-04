@@ -6,3 +6,5 @@ this is just a fun little game using only terminal and text for options
 this will make your given text into a junk text, when you give back the same junk text will return the original text
 # Hangman.py
 its just a normal hangam game which uses 1 files one for words (word.py)
+# File_sort.py
+this will just move the files to the specified folders by taking extensions name
