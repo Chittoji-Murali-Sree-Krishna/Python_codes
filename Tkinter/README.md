@@ -19,3 +19,5 @@ this will take your email and slice it giving you a username and domain
 this will print fibonacci number of that particualr number 
 # Password_manager.py
 this will generate a random password with special charectors and numbers and text with uppercase and lowercase, these values will be stored into a database and also copied to the clipboard when created and when called again from database so that you can keep track of your passwords, just remember the name which for ehich you are generating password and you can keep on tracking the same password till you loose the database
+# Roll_dice.py
+this is a basic dice rolling game
