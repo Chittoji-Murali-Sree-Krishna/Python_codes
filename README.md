@@ -8,3 +8,5 @@ this will make your given text into a junk text, when you give back the same jun
 its just a normal hangam game which uses 1 files one for words (word.py)
 # File_sorter.py
 this will just move the files to the specified folders by taking extensions name
+# Tkinter 
+this is having most of the projects, i choosed this because its more challenging than normal terminal based
