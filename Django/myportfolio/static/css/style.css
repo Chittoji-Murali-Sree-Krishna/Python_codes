@@ -1,1 +1,101 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    background-color: black;
+    color: white;
+}
+
+#profile_pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col1 {
+    width: 25%;
+}
+
+.col2 {
+    width: 65%;
+}
+
+hr {
+    width: 90%;
+    text-align: center;
+}
+
+.col3 {
+    width: 45%;
+}
+
+.col4 {
+    width: 45%;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.myprojects {
+    text-align: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 1.5em;
+    background-color: cadetblue;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 2em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: lawngreen;
+}
+
+h1 {
+    color: lawngreen;
+}
+
+.logo {
+    display: inline;
+}
