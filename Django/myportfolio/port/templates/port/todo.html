@@ -1,0 +1,11 @@
+{% extends 'port/home.html' %} {% load static %} {% block content %} {% for task in tasks %}
+<form>
+    {% csrf_token %} {{form.title}}
+    <input type="submit" name='Create Task'>
+</form>
+
+
+<div>
+    <p>{{task}}</p>
+</div>
+{% endfor %} {% endblock content %}
