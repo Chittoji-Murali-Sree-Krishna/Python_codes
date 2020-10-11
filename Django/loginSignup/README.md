@@ -2,7 +2,7 @@
 - this is main project
 ## settings.py
 - crispy forms for clean building the signup and login page because we can use bootstrap4 instead of bootstrap2
-### CRISPY_TEMPLATE_PACK='bootstrap4'
+#### CRISPY_TEMPLATE_PACK='bootstrap4'
 - we use these for redirecting the pages after loggin and logout if not the will choose there own
 #### LOGIN_REDIRECT_URL = '/' 
 #### LOGOUT_REDIRECT_URL = '/'
