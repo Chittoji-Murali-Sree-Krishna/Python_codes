@@ -18,6 +18,20 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 LOGIN_REDIRECT_URL = '/' 
 LOGOUT_REDIRECT_URL = '/'
 ```
+## urls.py
+- we are import register views as reg views so that we can use more views
+```python
+from register import views as regviews
+```
+- urls
+```python
+urlpatterns = [
+    path('signup/', regviews.signup, name='signup'),
+    path('', include('main.urls')),
+    path('',include('django.contrib.auth.urls')),
+]
+```
+- ~~for login and logout we dont need a url because django have built in urld for that~~
 # main
 - this is the normal app which have a home page
 ## templates
