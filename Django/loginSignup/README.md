@@ -59,7 +59,7 @@ urlpatterns = [
 ```
 ### registration
 - this has the login page
-- we are using the name as registration because by default django searches for registration page
+- we are using the name as registration because by default django searches for login page in registration folder
 ```html
 {% load crispy_forms_tags %} <!--loading the crispy-->
 <form class="form-group" method="post">
