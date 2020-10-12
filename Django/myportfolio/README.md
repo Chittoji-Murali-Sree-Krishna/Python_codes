@@ -41,4 +41,26 @@ def __str__(self):
 ## urls.py
 - this will have urls for the views
 ## views.py
-1. **home
+1. **home**
+>for home page
+2. **aboutme**
+>for aboutme page
+3. **myprojects**
+>for myprojects page
+4. **todo**
+>for todo page and we have to check whether the page is valid or no
+```python
+tasks = Task.objects.all()
+    form = TaskForm()
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('todo/')
+    context = {'tasks':tasks, 'form':form}
+```
+## admin.py
+>hence we are using the backend we also need to register task using admin
+```python
+admin.site.register(Task)
+```
