@@ -62,6 +62,7 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 ```
+- we can add even firstname, lastname, mobilenumber...
 ## views.py
 - we are using only signup view to modify it, but other stuff will be managed by django itself
 - we check the response method if it is post we will save else it will not save
