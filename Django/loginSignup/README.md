@@ -1,6 +1,14 @@
 # loginSignup
 - this is main project
 ## settings.py
+- installed appps 
+```python
+INSTALLED_APPS = [
+    'crispy_forms',
+    'main.apps.MainConfig',
+    'register.apps.RegisterConfig',
+]
+```
 - crispy forms for clean building the signup and login page because we can use bootstrap4 instead of bootstrap2
 ```python
 CRISPY_TEMPLATE_PACK='bootstrap4'
