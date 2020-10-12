@@ -29,12 +29,14 @@ VIDEO_TYPE ={
 ```python
 grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 cv2.imshow('grey', grey)
-if cv2.waitKey(20) & 0xFF == ord('q'):
+if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keeps on recording
         break
 ```
 ## for RGB
 ```python
 cv2.imshow('frame', frame)
-    if cv2.waitKey(20) & 0xFF == ord('q'):
+    if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keeps on recording
         break
 ```
+### now we have to destroy all windows after pressing q
+cv2.destroyAllWindows()
