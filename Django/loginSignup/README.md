@@ -50,6 +50,7 @@ urlpatterns = [
 ### register
 - this has the signup page
 ```html
+{% load crispy_forms_tags %} <!--loading the crispy-->
 <form method="post" class="form-group">
     {% csrf_token %} <!--csrf token for security-->
     {{form|crispy}} <!--making form crispy-->
@@ -59,6 +60,15 @@ urlpatterns = [
 ### registration
 - this has the login page
 - we are using the name as registration because by default django searches for registration page
+```html
+{% load crispy_forms_tags %} <!--loading the crispy-->
+<form class="form-group" method="post">
+    {% csrf_token %} <!--csrf token for security-->
+    {{form|crispy}} <!--making form crispy-->
+    <button type="submit" class="btn btn-success">Login</button>
+    <p>Not an User? create one <a href="/signup">HERE</a> </p>
+</form>
+```
 ## forms.py
 - this is to set the signup page page formatted and also can manage the required fields
 ```python
