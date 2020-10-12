@@ -31,7 +31,7 @@ urlpatterns = [
     path('',include('django.contrib.auth.urls')),
 ]
 ```
-- ~~for login and logout we dont need a url because django have built in urld for that~~
+- ~~for login and logout we dont need a url because django have built in urls for those~~
 # main
 - this is the normal app which have a home page
 ## templates
@@ -54,6 +54,14 @@ urlpatterns = [
 - we are using the name as registration because by default django searches for registration page
 ## forms.py
 - this is to set the signup page page neatly formatted and also can manage the required fields
+```python
+class RegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+```
 ## views.py
 - we are using only signup view to modify it, but other stuff will be managed by django itself
 - we check the response method if it is post we will save else it will not save
