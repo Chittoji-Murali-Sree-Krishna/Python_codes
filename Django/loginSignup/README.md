@@ -66,3 +66,12 @@ class RegisterForm(UserCreationForm):
 ## views.py
 - we are using only signup view to modify it, but other stuff will be managed by django itself
 - we check the response method if it is post we will save else it will not save
+```python
+if response.method == 'POST':
+        form = RegisterForm(response.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/') #here we redirect page to home after signup
+        else:
+            form = RegisterForm()
+```
