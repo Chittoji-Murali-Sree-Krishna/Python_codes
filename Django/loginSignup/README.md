@@ -21,13 +21,13 @@ LOGOUT_REDIRECT_URL = '/'
 # main
 - this is the normal app which have a home page
 ## templates
-### main
-- home.html parent file for other html files
-- this home page will show both login and signup pages inside it
-## urls.py
-- routing  the home page 
-## views.py
-- rendering the home page
+   ### main
+       - home.html parent file for other html files
+       - this home page will show both login and signup pages inside it
+   ## urls.py
+       - routing  the home page 
+   ## views.py
+       - rendering the home page
 
 
 # register
