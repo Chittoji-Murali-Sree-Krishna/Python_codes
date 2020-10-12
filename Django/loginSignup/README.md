@@ -53,7 +53,7 @@ urlpatterns = [
 - this has the login page
 - we are using the name as registration because by default django searches for registration page
 ## forms.py
-- this is to set the signup page page neatly formatted and also can manage the required fields
+- this is to set the signup page page formatted and also can manage the required fields
 ```python
 class RegisterForm(UserCreationForm):
     email = forms.EmailField()
