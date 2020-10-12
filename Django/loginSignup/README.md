@@ -49,6 +49,13 @@ urlpatterns = [
 ## templates
 ### register
 - this has the signup page
+```html
+<form method="post" class="form-group">
+    {% csrf_token %} <!--csrf token for security-->
+    {{form|crispy}} <!--making form crispy-->
+    <button type="submit" class="btn btn-success">signup</button>
+</form>
+```
 ### registration
 - this has the login page
 - we are using the name as registration because by default django searches for registration page
