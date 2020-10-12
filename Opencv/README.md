@@ -10,6 +10,12 @@ filename = 'video.avi'
 frames_per_seconds = 24.0
 resol = '720p'
 ```
+## for frame height and width
+```python
+def change_res(cap, width, height):
+    cap.set(3, width)
+    cap.set(4, height)
+```
 ## for different resolutions
 ```python
 STD_DIMENSIONS = {
@@ -35,8 +41,8 @@ if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keep
 ## for RGB
 ```python
 cv2.imshow('frame', frame)
-    if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keeps on recording
-        break
+if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keeps on recording
+break
 ```
 ### now we have to destroy all windows after pressing q
 cv2.destroyAllWindows()
