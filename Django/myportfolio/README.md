@@ -60,7 +60,7 @@ tasks = Task.objects.all()
     context = {'tasks':tasks, 'form':form}
 ```
 ## admin.py
->hence we are using the backend we also need to register task using admin
+- hence we are using the backend we also need to register task using admin
 ```python
 admin.site.register(Task)
 ```
