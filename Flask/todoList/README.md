@@ -17,3 +17,18 @@
 {% for task in tasks %}<!--we are getting this from app .py from the route return-->
 <p>the new tasks will update the div tag</p>
 ```
+# app.py
+```python
+from flask_sqlalchemy import SQLAlchemy #for using the database we have to install flask_SQLAlchemy
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///main.db' 
+db = SQLAlchemy(app) #this will create the database
+#for creating models in database
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True) #this will generate id for each and every task so that it will be easy to update or delete the task
+    content = db.Column(db.String(200), nullable=False) # for content
+    date_created = db.Column(db.DateTime, default=datetime.utcnow) # for the date
+    if request.method == 'POST':
+    #then only it initialize the process
+    #i use try and except for errors 
+```
