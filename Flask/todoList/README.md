@@ -31,4 +31,6 @@ class Todo(db.Model):
     if request.method == 'POST':
     #then only it initialize the process
     #i use try and except for errors 
-```
+```#for update and delete we have use the id to make it unique from others so routing will be
+@app.route('/delete/<int:id>')
+@app.route('/update/<int:id>')
