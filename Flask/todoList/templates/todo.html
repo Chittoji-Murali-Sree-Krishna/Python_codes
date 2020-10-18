@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+Todo-List
+{% endblock %}
+{% block content %}
+<div class="content">
+  <h1>Tasks Manager</h1>
+  {% if tasks|length < 1 %}
+  <h2>there are no tasks create one</h2>
+  {% else %}
+  <div class="todos">
+    <h2 style="color: black;">TASK</h2>
+    <p>DATE CREATED</p>
+    <div class="buttons">
+      <p>ACTIONS</p>
+    </div>
+  </div>
+  <hr>
+  {% for task in tasks %}
+  <div class="todos">
+    <h2>{{ task.content }}</h2>
+    <p>{{ task.date_created.date() }}</p>
+    <div class="buttons">
+      <button id="update"><a href="/update/{{task.id}}">Update</a></button>
+      <button id="delete"><a href="/delete/{{task.id}}">Delete</a></button>
+    </div>
+  </div>
+  {% endfor %}
+  </table>
+  {% endif %}
+  <br>
+  <form action="/" method="POST">
+    <input type="text" name="content" placeholder="enter the task" id="content">
+    <br>
+    <br>
+    <input type="submit" class="submit" value="[+] Add">
+  </form>
+</div>
+{% endblock %}

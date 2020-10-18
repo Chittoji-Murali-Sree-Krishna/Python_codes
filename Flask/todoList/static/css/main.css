@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+.content{
+  text-align: center;
+}
+#delete{
+ background-color: red;
+}
+#update{
+  background-color: green;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.submit{
+background-color: blue;
+font-weight: bolder;
+font-size: 1rem;
+color: white;
+border: 1px solid white;
+min-height: 2em;
+min-width: 6em;
+}
+.todos{
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  justify-content: space-around;
+}
+p{
+  color: black;
+}
+#content{
+min-width: 30em;
+min-height: 3em;
+}
