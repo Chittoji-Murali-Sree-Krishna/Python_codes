@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <div class="logo">
+    <b>(murali)</b>
+  </div>
+  <button class="nav-toggle" area-label="toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#intro" class="nav__links">Home</a>
+      </li>
+      <li class="nav__item">
+        <a href="#services" class="nav__links">My knowledge</a>
+      </li>
+      <li class="nav__item">
+        <a href="#about" class="nav__links">About me</a>
+      </li>
+      <li class="nav__item">
+        <a href="#work" class="nav__links">My work</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section class="intro" id="home">
+  <h1 class="section__title section__title--intro">
+    Hi, I am <strong>C murali sree krishna</strong>
+  </h1>
+  <p class="section__subtitle section__subtitle--intro">Graduate-2020</p>
+  <img src="{{url_for('static', filename='images/mypic.jpg')}}" alt="" class="intro__img" />
+</section>
+<section class="my-services" id="services">
+  <h2 class="section__title section__title--services">What I learnt</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Front-end</h3>
+      <p>
+        done few static pages with html and css and javascript, have done
+        done few minor javascript projects and stuff, done an arch linux
+        installation website with some animations and a bit of dyanamic in
+        nature and few more like validation and stuff
+      </p>
+    </div>
+    <div class="service">
+      <h3>Python</h3>
+      <p>
+        Created few projects with python using GUI based, so that it gives
+        me extra challenge than regular terminal based projects i used few
+        of modules such as tkinter selenium and flask and terminal based
+        calculator with most of the basics in python
+      </p>
+    </div>
+    <div class="service">
+      <h3>Back-end</h3>
+      <p>
+        working with django and flask as a back end framework by which
+        making my website more responsive and some login and signup with
+        sqlite and have Created an website named smart radio which uses the
+        php as the back-end and sql as database
+      </p>
+    </div>
+  </div>
+  <a href="#work" class="btn">my Work</a>
+</section>
+<section class="about-me" id="about">
+  <h2 class="section__title section__title--about">Who I am</h2>
+  <p class="section__subtitle section__subtitle--about">
+    Graduate 2020 batch, GITAM university
+  </p>
+  <div class="about-me__body">
+    <p>
+      graduate just having basic knowledge in front-end and python
+      launguages required for a industry, i developed few personal projects
+      and done my mini-project and main projects on IOT, i have achieved few
+      certificates in pirple and hacker rank and freecodecamp
+    </p>
+  </div>
+  <img src="{{url_for('static', filename='images/mypic2.jpg')}}" alt="my pic" class="about-me__img" />
+</section>
+<section class="my-work" id="work">
+  <h2 class="section__title">My work & Certificates</h2>
+  <p class="section__subtitle--work">
+    My github account & certificates i earned
+  </p>
+  <div class="portfolio">
+    <a href="#" class="portfolio__item">
+      <img src="{{url_for('static', filename='images/work.jpg')}}" alt="" class="portfolio__img" />
+    </a>
+    <a href="#" class="portfolio__item">
+      <img src="{{url_for('static', filename='images/work1.png')}}" alt="" class="portfolio__img" />
+    </a>
+    <a href="#" class="portfolio__item">
+      <img src="{{url_for('static', filename='images/work2.png')}}" alt="" class="portfolio__img" />
+    </a>
+    <a href="#" class="portfolio__item">
+      <img src="{{url_for('static', filename='images/work3.png')}}" alt="" class="portfolio__img" />
+    </a>
+    <a href="#" class="portfolio__item">
+      <img src="{{url_for('static', filename='images/work4.png')}}" alt="" class="portfolio__img" />
+    </a>
+  </div>
+</section>
+<footer>
+  <a href="#" class="footer__link">cmkrishna97@gmail.com</a>
+  <ul class="social-list">
+    <li class="social-list__item">
+      <a href="https://github.com/Chittoji-Murali-Sree-Krishna" class="social-list__link">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a href="https://www.facebook.com/murali.sreekrishna.chittoji" class="social-list__link">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+    </li>
+    <li class="soxial-list__item">
+      <a href="https://twitter.com/CmuraliSree" class="social-list__link">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  </ul>
+</footer>
+{% endblock %}
