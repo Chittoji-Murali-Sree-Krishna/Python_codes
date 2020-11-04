@@ -37,6 +37,7 @@ cv2.destroyAllWindows()
 >for reading the images 
 ```python
 cv2.imread('full path of image')
+cv2.imshow('Image', img)
 ```
 # 3. videoread.py
 >for reading the video
