@@ -1,10 +1,6 @@
 # 1.video.py
 >this for recording video
 ```python 
-# we have to import particular frameworks to make it run properly
- import os
- import numpy as np
- import cv2
 # to set the video filename and frames and resolution
 filename = 'video.avi'
 frames_per_seconds = 24.0
