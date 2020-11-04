@@ -1,4 +1,4 @@
-# <span style="color: green"> video.py</span>
+# <font color="green">video.py</font>
 ## opencv 
 >we have to import particular frameworks to make it run properly
 1. import os
