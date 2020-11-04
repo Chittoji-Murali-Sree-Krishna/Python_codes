@@ -6,7 +6,7 @@ def rescaleFrame(frame, scale=0.75):
     dimensions = (width,height)
     return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
-capture = cv2.VideoCapture('/home/wargun/Videos/earth.mp4')
+capture = cv2.VideoCapture('full path.mp4')
 while True:
     isTrue, frame = capture.read()
     frame_resized = rescaleFrame(frame)
