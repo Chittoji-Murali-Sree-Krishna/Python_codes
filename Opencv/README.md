@@ -41,13 +41,24 @@ cv2.imread('full path of image')
 # 3. videoread.py
 >for reading the video
 ```python
+# for rescaling the video
+def rescaleFrame(frame, scale=0.75): # 0.75 means video will be 75% of its resolution
+    width = int(frame.shape[1] * scale)
+    height = int(frame.shape[0] * scale)
+    dimensions = (width,height)
+    return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
+
 # for reading the videos we use VideoCapture
 capture = cv2.VideoCapture('full path for the image') 
 while True:
     #checking the frames to read
     isTrue, frame = capture.read()
+    # for the resized frame
+    frame_resized = rescaleFrame(frame)
     # this is to show the video
-    cv2.imshow('Video', frame) 
+    cv2.imshow('Video', frame)
+    # this is to show resized frame
+    cv2.imshow('Video Resized', frame_resized)
     # we wait 20sec or exit by pressing q
     if cv2.waitKey(20) & 0xFF==ord('q'): 
         break
