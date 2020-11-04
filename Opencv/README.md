@@ -46,7 +46,9 @@ if cv2.waitKey(20) & 0xFF == ord('q'): #this for ending the frame if not it keep
 break
 ```
 #### now we have to destroy all windows after pressing q
+```python
 cv2.destroyAllWindows()
+```
 # readimages.py
 >for reading the images we have to give full location if not it won't work
 ```python
