@@ -1,4 +1,4 @@
-# <font color="green">video.py</font>
+# 1.video.py
 ## opencv 
 >we have to import particular frameworks to make it run properly
 1. import os
@@ -49,7 +49,7 @@ break
 ```python
 cv2.destroyAllWindows()
 ```
-# readimages.py
+# 2.readimages.py
 >for reading the images we have to give full location if not it won't work
 ```python
 cv2.imread('full path of image')
