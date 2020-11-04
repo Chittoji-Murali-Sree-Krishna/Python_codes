@@ -45,10 +45,15 @@ cv2.imread('full path of image')
 # 3. videoread.py
 >for reading the video
 ```python
-capture = cv2.VideoCapture('full path for the image') # for reading the videos we use VideoCapture
+# for reading the videos we use VideoCapture
+capture = cv2.VideoCapture('full path for the image') 
 while True:
-    isTrue, frame = capture.read() #checking the frames to read
-    cv2.imshow('Video', frame) # this is to show the video
-    if cv2.waitKey(20) & 0xFF==ord('q'): # we wait 20sec or exit by pressing q
+    #checking the frames to read
+    isTrue, frame = capture.read()
+    # this is to show the video
+    cv2.imshow('Video', frame) 
+    # we wait 20sec or exit by pressing q
+    if cv2.waitKey(20) & 0xFF==ord('q'): 
         break
- capture.release() #we have to release the frames
+ #we have to release the frames
+ capture.release() 
