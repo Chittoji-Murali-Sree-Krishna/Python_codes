@@ -44,8 +44,8 @@ while (True):
     ret, frame = cap.read()
     out.write(frame)
     # for grey scale
-    # grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # cv2.imshow('grey', grey)
+     grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+     cv2.imshow('grey', grey)
     # for RGB 
     cv2.imshow('frame', frame)
     if cv2.waitKey(20) & 0xFF == ord('q'):
