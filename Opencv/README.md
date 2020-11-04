@@ -47,3 +47,8 @@ break
 ```
 #### now we have to destroy all windows after pressing q
 cv2.destroyAllWindows()
+# readimages.py
+>for reading the images we have to give full location if not it won't work
+```python
+cv2.imread('full path of image')
+```
