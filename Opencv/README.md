@@ -1,4 +1,4 @@
-# 1.video.py
+# 1.CaptureVideo.py
 >this for recording video
 ```python 
 # to set the video filename and frames and resolution
@@ -33,13 +33,13 @@ break
 # now we have to destroy all windows after pressing q
 cv2.destroyAllWindows()
 ```
-# 2.readimages.py
+# 2.ReadImages.py
 >for reading the images 
 ```python
 cv2.imread('full path of image')
 cv2.imshow('Image', img)
 ```
-# 3. videoread.py
+# 3. Readvideo.py
 >for reading the video
 ```python
 # for rescaling the video
