@@ -38,7 +38,17 @@ break
 cv2.destroyAllWindows()
 ```
 # 2.readimages.py
->for reading the images we have to give full location if not it won't work
+>for reading the images 
 ```python
 cv2.imread('full path of image')
 ```
+# 3. videoread.py
+>for reading the video
+```python
+capture = cv2.VideoCapture('full path for the image') # for reading the videos we use VideoCapture
+while True:
+    isTrue, frame = capture.read() #checking the frames to read
+    cv2.imshow('Video', frame) # this is to show the video
+    if cv2.waitKey(20) & 0xFF==ord('q'): # we wait 20sec or exit by pressing q
+        break
+ capture.release() #we have to release the frames
