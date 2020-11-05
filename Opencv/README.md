@@ -33,13 +33,7 @@ break
 # now we have to destroy all windows after pressing q
 cv2.destroyAllWindows()
 ```
-# 2.ReadImages.py
->for reading the images 
-```python
-cv2.imread('full path of image')
-cv2.imshow('Image', img)
-```
-# 3. Readvideo.py
+# 2. Readvideo.py
 >for reading the video
 ```python
 # for rescaling the video
@@ -66,7 +60,7 @@ while True:
  #we have to release the frames
  capture.release() 
  ```
- # 4. Basicfunctions.py
+ # 3. Basicfunctions.py
  >these are few basic functions of opencv
  ```python
  # kernel for uint8
@@ -86,4 +80,10 @@ imEroded = cv2.erode(imDialation, kernel, iterations=1)
 imResize = cv2.resize(img,(250,250))
 # to crop the image
 imCropped = img[0:200,200:500]
+# to draw shapes or to write text
+cv2.line(img,(0,0),(img.shape[1],img.shape[0]),(0,255,0),3)
+cv2.rectangle(img,(0,0),(250,350),(0,0,255),2)
+cv2.circle(img,(400,50),30,(255,255,0),5)
+# for text we have to use cv2 fonts
+cv2.putText(img,"Hey Warlord",(300,150),cv2.FONT_HERSHEY_COMPLEX,1,(0,150,0),1)
 ```
