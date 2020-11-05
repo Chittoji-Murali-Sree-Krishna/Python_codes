@@ -82,3 +82,8 @@ imCanny = cv2.Canny(img, 150, 200)
 imDialation = cv2.dilate(imCanny, kernel, iterations=1)
 # for erode image
 imEroded = cv2.erode(imDialation, kernel, iterations=1)
+# to resize the image
+imResize = cv2.resize(img,(250,250))
+# to crop the image
+imCropped = img[0:200,200:500]
+```
