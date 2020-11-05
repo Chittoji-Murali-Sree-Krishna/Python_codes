@@ -65,3 +65,20 @@ while True:
         break
  #we have to release the frames
  capture.release() 
+ ```
+ # 4. Basicfunctions.py
+ >these are few basic functions of opencv
+ ```python
+ # kernel for uint8
+ kernel = np.ones((5,5),np.uint8)
+ # will convert it to greyscale
+imGrey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# will convert to blur
+imBlur = cv2.GaussianBlur(imGrey,(11,11),0)
+# for canny image
+imCanny = cv2.Canny(img, 150, 200)
+# here we need numpy for special readings
+# for dilate image
+imDialation = cv2.dilate(imCanny, kernel, iterations=1)
+# for erode image
+imEroded = cv2.erode(imDialation, kernel, iterations=1)
