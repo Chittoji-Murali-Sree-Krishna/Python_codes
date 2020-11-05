@@ -9,6 +9,8 @@ imBlur = cv2.GaussianBlur(imGrey,(11,11),0)
 imCanny = cv2.Canny(img, 150, 200)
 imDialation = cv2.dilate(imCanny, kernel, iterations=1)
 imEroded = cv2.erode(imDialation, kernel, iterations=1)
+imResize = cv2.resize(img,(250,250))
+imCropped = img[0:200,200:500]
 
 
 
@@ -17,4 +19,7 @@ cv2.imshow('Blur image', imBlur)
 cv2.imshow('Canny image', imCanny)
 cv2.imshow('Dilation image', imDialation)
 cv2.imshow('Eroded image', imEroded)
+cv2.imshow('Image', img)
+cv2.imshow('Resize image', imResize)
+cv2.imshow('Cropped image', imCropped)
 cv2.waitKey(0)
