@@ -13,7 +13,7 @@ imResize = cv2.resize(img,(250,250))
 imCropped = img[0:200,200:500]
 
 
-
+cv2.imshow('Image', img)
 cv2.imshow('Gray image', imGrey)
 cv2.imshow('Blur image', imBlur)
 cv2.imshow('Canny image', imCanny)
