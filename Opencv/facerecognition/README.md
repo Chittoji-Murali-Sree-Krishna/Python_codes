@@ -1,12 +1,5 @@
 # faceRecog.py
 >this is the file to recognize the person or photo
-# trainFace.py
->this is file to train the model
-# labels.pickle
->this is to save the labels for the pictures
-# trainer.ynl
->this saves the trained data
-## faceRecog.py
 ```python
 # we use recognizer for recognizer to read the tainer
 #! we have to give full path so that it wont show up any eroors
@@ -26,7 +19,8 @@ if conf>=4 and conf <= 85:
             stroke = 2 
             cv2.putText(frame, name, (x,y), font, 1, color, stroke, cv2.LINE_AA)
 ```
-## trainFace.py
+# trainFace.py
+>this is file to train the model
 ```python
 # we take the entire folder byh using abspath
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -59,5 +53,9 @@ with open("labels.pickle", 'wb') as f:
 recognizer.train(x_train, np.array(y_labels))
 recognizer.save("trainner.yml")
 ```
+# labels.pickle
+>this is to save the labels for the pictures
+# trainer.ynl
+>this saves the trained data
 # output
 ![](images/pic1.jpg?raw=true)
