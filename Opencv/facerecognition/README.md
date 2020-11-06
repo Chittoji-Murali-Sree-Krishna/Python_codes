@@ -26,4 +26,38 @@ if conf>=4 and conf <= 85:
             stroke = 2 
             cv2.putText(frame, name, (x,y), font, 1, color, stroke, cv2.LINE_AA)
 ```
+## trainFace.py
+```python
+# we take the entire folder byh using abspath
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+image_dir = os.path.join(BASE_DIR, "images")
+# here we check the files ending with .jpg or .png and give them labels
+if file.endswith("png") or file.endswith("jpg"):
+			path = os.path.join(root, file)
+			label = os.path.basename(root).replace(" ", "-").lower()
+			if not label in label_ids:
+				label_ids[label] = current_id
+				current_id += 1
+			id_ = label_ids[label]
+# and we have to change the resolution to same for all images if not issues might build up
+pil_image = Image.open(path).convert("L")
+			size = (550, 550)
+			final_image = pil_image.resize(size, Image.ANTIALIAS)
+			image_array = np.array(final_image, "uint8")
+			#print(image_array)
+			faces = face_cascade.detectMultiScale(image_array, scaleFactor=1.5, minNeighbors=5)
+
+# now we append the roi and id_ to train and label
+for (x,y,w,h) in faces:
+				roi = image_array[y:y+h, x:x+w]
+				x_train.append(roi)
+				y_labels.append(id_)
+# now we use pickle for labels and dump them as file
+with open("labels.pickle", 'wb') as f:
+	pickle.dump(label_ids, f)
+# we use numpy array of labels to train and save them
+recognizer.train(x_train, np.array(y_labels))
+recognizer.save("trainner.yml")
+```
+# output
 ![](images/pic1.jpg?raw=true)
