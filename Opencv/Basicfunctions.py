@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
-img = cv2.imread('/home/wargun/Pictures/spiderman2.jpg')
+path = '/home/wargun/Pictures/spiderman2.jpg'
+img = cv2.imread(path)
 
 
 kernel = np.ones((5,5),np.uint8)
