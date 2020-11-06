@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from numpy.core.defchararray import upper
 path = '/home/wargun/Pictures/spiderman2.jpg'
 
 def empty(a):
