@@ -87,3 +87,26 @@ cv2.circle(img,(400,50),30,(255,255,0),5)
 # for text we have to use cv2 fonts
 cv2.putText(img,"Hey Warlord",(300,150),cv2.FONT_HERSHEY_COMPLEX,1,(0,150,0),1)
 ```
+# 4.Mask.py
+>this has some some functions like saturation,hue,val to mask the image, we use trackbars to set the value
+```python
+# we have to define a empty function
+def empty(a):
+    pass
+# ! check for spellings
+# name for the window
+cv2.namedWindow('TrackBars')
+# size of the window
+cv2.resizeWindow('TrackBars', 640, 240)
+# hue will be upto 180 in opencv so we take 179, & we need 6 of them for hue_min,max,sat_min,max, val_min,max
+cv2.createTrackbar('Hue Min', 'TrackBars', 0, 179, empty)
+# we take this in a loop so that it keeps on updating without exit
+while True:
+# we need numpy for creating array for the mask
+lower = np.array([h_min, s_min, v_min])
+upper = np.array([h_max, s_max, v_max])
+mask = cv2.inRange(imgHSV, lower, upper)
+# for the color mask 
+imgResult = cv2.bitwise_and(img, img, mask=mask)
+cv2.imshow('Result', imgResult)
+```
