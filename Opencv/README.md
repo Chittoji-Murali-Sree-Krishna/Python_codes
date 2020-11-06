@@ -110,3 +110,6 @@ mask = cv2.inRange(imgHSV, lower, upper)
 imgResult = cv2.bitwise_and(img, img, mask=mask)
 cv2.imshow('Result', imgResult)
 ```
+# 5.facerecognition
+>this is a basic face recognition, it wont be as accurate as ai based stuff but it can keep up if the training data is proper
+>this just a basic stuff which takes the folder name as labels and images inside the folder for recognition
