@@ -55,7 +55,7 @@ recognizer.save("trainner.yml")
 ```
 # labels.pickle
 >this is to save the labels for the pictures
-# trainer.ynl
+# trainer.yml
 >this saves the trained data
 # output
 ![](images/pic1.jpg?raw=true)
