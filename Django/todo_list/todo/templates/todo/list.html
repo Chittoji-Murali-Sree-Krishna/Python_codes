@@ -1,0 +1,41 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block nav %}
+Todo List
+{% endblock %}
+{% block content %}
+<h1>Todo List</h1>
+<form method="POST" action="/">
+{% csrf_token %}
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">
+        {{form.title}}
+        </span>
+    </div>
+    <input type="submit" value="Create Task" class="btn btn-sm btn-success">
+</div>
+</form>
+<br/>
+<br/>
+{% for task in tasks %}
+<div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        {% if task.complete != True %}
+            <span class="input-group-text">
+                {{task}} &nbsp;
+            </span>
+            {% else %}
+            <strike class="input-group-text">
+            {{task}}
+            </strike>
+            {% endif %}
+        </div>
+            <a href="{% url 'update_task' task.id %}" class="btn btn-sm btn-info">Update</a>
+            <a href="{% url 'delete_task' task.id %}" class="btn btn-sm btn-danger">Delete</a>
+    </div>
+    </div>
+{% endfor %}
+{% endblock %}

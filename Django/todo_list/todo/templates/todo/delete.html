@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block nav %}
+Delete Todo
+{% endblock %}
+{% block content %}
+<p>"{{item}}" &nbsp; Are you sure want to Delete?</p>
+<form method="POST" action="">
+    {% csrf_token %}
+    <a href="{% url 'home' %}" class="btn btn-sm btn-info">Cancel</a>
+    <input type="submit" name="Confirm" value="Confirm" class="btn btn-sm btn-danger">
+</form>
+{% endblock %}

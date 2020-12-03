@@ -1,0 +1,19 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block nav %}
+Update List
+{% endblock %}
+{% block content %}
+<h1>Update Task</h1>
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+                <b>{{form}}</b> &nbsp;
+            </span>
+        </div>
+        <input type="submit" class="btn btn-sm btn-warning" name="Update Task" value="Submit">
+    </div>
+</form>
+{% endblock %}
