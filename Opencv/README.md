@@ -113,3 +113,6 @@ cv2.imshow('Result', imgResult)
 # 5.facerecognition
 >this is a basic face recognition, it wont be as accurate as ai based stuff but it can keep up if the training data is proper
 >this just a basic stuff which takes the folder name as labels and images inside the folder for recognition
+
+
+![facerecog](https://user-images.githubusercontent.com/62329524/104125097-7aee7580-534c-11eb-886c-0c10bd194399.jpg)
