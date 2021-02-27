@@ -1,3 +1,4 @@
+> pip install tkinter
 # calculator.py
 the calculator is having very basic functions 
 # file.py
