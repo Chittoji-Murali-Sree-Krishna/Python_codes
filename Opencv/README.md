@@ -1,3 +1,4 @@
+> pip install cv2
 # 1.CaptureVideo.py
 >this for recording video
 ```python 
